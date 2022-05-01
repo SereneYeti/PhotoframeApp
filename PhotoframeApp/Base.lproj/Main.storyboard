@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoframeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-ld-lAL">
+                                <rect key="frame" x="7" y="198" width="400" height="500"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marguay-wild-cat-up-close-1200x853" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-nv-q7B">
+                                        <rect key="frame" x="38.5" y="52.5" width="323" height="395"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="323" id="fin-W6-xrU"/>
+                                            <constraint firstAttribute="height" constant="395" id="v4y-50-RvM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="i8u-eY-dFK" appends="YES" id="sIy-LQ-hte"/>
+                                            <outletCollection property="gestureRecognizers" destination="GV4-f4-LhM" appends="YES" id="0ZM-rz-nwS"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="gkc-nv-q7B" firstAttribute="centerY" secondItem="bTX-ld-lAL" secondAttribute="centerY" id="GH6-Dm-Frd"/>
+                                    <constraint firstItem="gkc-nv-q7B" firstAttribute="centerX" secondItem="bTX-ld-lAL" secondAttribute="centerX" id="LCA-y7-Ed1"/>
+                                    <constraint firstAttribute="height" constant="500" id="bWI-NY-NLC"/>
+                                    <constraint firstAttribute="width" constant="400" id="zq7-h1-Dlp"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lPB-2j-vsQ" appends="YES" id="dW5-8z-UfR"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.55115104416178839" green="0.81695237424638534" blue="0.5724287343706197" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bTX-ld-lAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C48-vF-waO"/>
+                            <constraint firstItem="bTX-ld-lAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L8m-Q8-UbX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FrameView" destination="bTX-ld-lAL" id="hk5-bm-CcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lPB-2j-vsQ">
+                    <connections>
+                        <action selector="ChangeFrameColour:" destination="BYZ-38-t0r" id="kA4-bq-dOK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="i8u-eY-dFK" userLabel="Right">
+                    <connections>
+                        <action selector="NextPhoto:" destination="BYZ-38-t0r" id="9Qw-Yg-9rm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="GV4-f4-LhM" userLabel="Left">
+                    <connections>
+                        <action selector="PreviousPhoto:" destination="BYZ-38-t0r" id="Xfv-M8-sn4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Marguay-wild-cat-up-close-1200x853" width="1200" height="853"/>
+    </resources>
 </document>
