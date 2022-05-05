@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-ld-lAL">
                                 <rect key="frame" x="7" y="198" width="400" height="500"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marguay-wild-cat-up-close-1200x853" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-nv-q7B">
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_00" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-nv-q7B">
                                         <rect key="frame" x="38.5" y="52.5" width="323" height="395"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -45,18 +46,24 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.55115104416178839" green="0.81695237424638534" blue="0.5724287343706197" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bTX-ld-lAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C48-vF-waO"/>
                             <constraint firstItem="bTX-ld-lAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L8m-Q8-UbX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lPU-hS-dEB" appends="YES" id="pes-G7-XWZ"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="BackgroundView" destination="8bC-Xf-vdC" id="3cz-CY-9zK"/>
                         <outlet property="FrameView" destination="bTX-ld-lAL" id="hk5-bm-CcI"/>
+                        <outlet property="ivPhotoContainer" destination="gkc-nv-q7B" id="ix1-Vj-Uh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="lPB-2j-vsQ">
+                <tapGestureRecognizer id="lPB-2j-vsQ" userLabel="ChangeFrameColourTap">
                     <connections>
                         <action selector="ChangeFrameColour:" destination="BYZ-38-t0r" id="kA4-bq-dOK"/>
                     </connections>
@@ -71,11 +78,19 @@
                         <action selector="PreviousPhoto:" destination="BYZ-38-t0r" id="Xfv-M8-sn4"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="lPU-hS-dEB" userLabel="ChangeBackgroundColourTap">
+                    <connections>
+                        <action selector="ChangeBackgroundColour:" destination="BYZ-38-t0r" id="qwM-Xe-NTf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Marguay-wild-cat-up-close-1200x853" width="1200" height="853"/>
+        <image name="IMG_00" width="4032" height="3024"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
