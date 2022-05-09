@@ -44,13 +44,27 @@
                                     <outletCollection property="gestureRecognizers" destination="lPB-2j-vsQ" appends="YES" id="dW5-8z-UfR"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqX-69-0I1">
+                                <rect key="frame" x="119" y="44" width="176" height="40"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ImageName">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="OqX-69-0I1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5CD-V0-5ym"/>
                             <constraint firstItem="bTX-ld-lAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C48-vF-waO"/>
                             <constraint firstItem="bTX-ld-lAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L8m-Q8-UbX"/>
+                            <constraint firstItem="OqX-69-0I1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eU3-Jn-asf"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lPU-hS-dEB" appends="YES" id="pes-G7-XWZ"/>
@@ -60,6 +74,7 @@
                         <outlet property="BackgroundView" destination="8bC-Xf-vdC" id="3cz-CY-9zK"/>
                         <outlet property="FrameView" destination="bTX-ld-lAL" id="hk5-bm-CcI"/>
                         <outlet property="ivPhotoContainer" destination="gkc-nv-q7B" id="ix1-Vj-Uh2"/>
+                        <outlet property="lblImageName" destination="OqX-69-0I1" id="w6a-MA-6Yc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
