@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-ld-lAL">
                                 <rect key="frame" x="7" y="198" width="400" height="500"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_00" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-nv-q7B">
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_05.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-nv-q7B">
                                         <rect key="frame" x="38.5" y="52.5" width="323" height="395"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -103,7 +103,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_00" width="4032" height="3024"/>
+        <image name="IMG_05.JPG" width="3840" height="2160"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
