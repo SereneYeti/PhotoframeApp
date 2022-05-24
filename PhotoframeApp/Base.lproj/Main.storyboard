@@ -40,12 +40,9 @@
                                     <constraint firstAttribute="height" constant="500" id="bWI-NY-NLC"/>
                                     <constraint firstAttribute="width" constant="400" id="zq7-h1-Dlp"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lPB-2j-vsQ" appends="YES" id="dW5-8z-UfR"/>
-                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqX-69-0I1">
-                                <rect key="frame" x="119" y="44" width="176" height="40"/>
+                                <rect key="frame" x="113.5" y="44" width="187" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="ImageName">
                                         <attributes>
@@ -66,9 +63,6 @@
                             <constraint firstItem="bTX-ld-lAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L8m-Q8-UbX"/>
                             <constraint firstItem="OqX-69-0I1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eU3-Jn-asf"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="lPU-hS-dEB" appends="YES" id="pes-G7-XWZ"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="BackgroundView" destination="8bC-Xf-vdC" id="3cz-CY-9zK"/>
@@ -78,11 +72,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="lPB-2j-vsQ" userLabel="ChangeFrameColourTap">
-                    <connections>
-                        <action selector="ChangeFrameColour:" destination="BYZ-38-t0r" id="kA4-bq-dOK"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="i8u-eY-dFK" userLabel="Right">
                     <connections>
                         <action selector="NextPhoto:" destination="BYZ-38-t0r" id="9Qw-Yg-9rm"/>
@@ -93,11 +82,6 @@
                         <action selector="PreviousPhoto:" destination="BYZ-38-t0r" id="Xfv-M8-sn4"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <tapGestureRecognizer id="lPU-hS-dEB" userLabel="ChangeBackgroundColourTap">
-                    <connections>
-                        <action selector="ChangeBackgroundColour:" destination="BYZ-38-t0r" id="qwM-Xe-NTf"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
